@@ -18,7 +18,9 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " processing
-nmap z :call extrovert#Test()<CR>
+" nmap z :call extrovert#Test()<CR>
+command! -nargs=1 Test call extrovert#Test()<CR>
+
 
 " restore user setting
 let &cpo = s:save_cpo

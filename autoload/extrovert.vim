@@ -166,22 +166,22 @@ endfunction
 
 function CopyText(text)
     let copy_command = GetClipboardPiper()
-    system("echo " . a:text . " | " . copy_command)
+    call system("echo " . a:text . " | " . copy_command)
 endfunction
 
 function extrovert#OpenUrl(url)
     let open_command = GetOpenCommand()
-    system(open_command . " " . a:url)
+    call system(open_command . " " . a:url)
 endfunction
 
 function extrovert#CopyGitUrl()
     let git_url = GetGitUrl(1)
-    CopyText(git_url)
+    call CopyText(git_url)
 endfunction
 
 function extrovert#CopyGitFileUrl()
     let git_url = GetGitUrl(0)
-    CopyText(git_url)
+    call CopyText(git_url)
 endfunction
 
 function extrovert#OpenGitUrl()

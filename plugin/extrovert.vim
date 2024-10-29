@@ -19,7 +19,7 @@ set cpo&vim
 
 " processing
 " nmap z :call extrovert#Test()<CR>
-command! -nargs=1 Test call extrovert#Test()<CR>
+command! -nargs=0 Test call extrovert#Test()<CR>
 
 
 " restore user setting

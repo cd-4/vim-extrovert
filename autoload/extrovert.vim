@@ -171,7 +171,7 @@ endfunction
 
 function! OpenUrl(url)
     let open_command = GetOpenCommand()
-    system(open_command . " " . url)
+    system(open_command . " " . a:url)
 endfunction
 
 function! extrovert#CopyGitUrl()

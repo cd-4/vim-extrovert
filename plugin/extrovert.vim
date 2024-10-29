@@ -17,11 +17,19 @@ let g:loaded_vim_extrovert = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-" processing
+" Exported Functions
 " nmap z :call extrovert#Test()<CR>
 command! -nargs=0 Test call extrovert#Test()
+
+command! -nargs=0 CopyGitUrl call extrovert#CopyGitUrl()
+command! -nargs=0 CopyGitFileUrl call extrovert#CopyGitFileUrl()
+command! -nargs=0 OpenGitUrl call extrovert#OpenGitUrl()
+command! -nargs=0 OpenGitFileUrl call extrovert#OpenGitFileUrl()
+
 
 
 " restore user setting
 let &cpo = s:save_cpo
 unlet s:save_cpo
+
+

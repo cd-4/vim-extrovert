@@ -7,8 +7,7 @@ if !exists('g:loaded_vim_extrovert')
     finish
 endif
 
-" let g:loaded_vim_extrovert = 1
-"let g:
+let g:loaded_vim_extrovert = 1
 
 let s:save_cpo = &cpo
 set cpo&vim

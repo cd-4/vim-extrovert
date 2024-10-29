@@ -169,7 +169,7 @@ function CopyText(text)
     call system("echo " . a:text . " | " . copy_command)
 endfunction
 
-function extrovert#OpenUrl(url)
+function OpenUrl(url)
     let open_command = GetOpenCommand()
     call system(open_command . " " . a:url)
 endfunction
@@ -186,12 +186,12 @@ endfunction
 
 function extrovert#OpenGitUrl()
     let git_url = GetGitUrl(1)
-    call extrovert#OpenUrl(git_url)
+    call OpenUrl(git_url)
 endfunction
 
 function extrovert#OpenGitFileUrl()
     let git_url = GetGitUrl(0)
-    call extrovert#OpenUrl(git_url)
+    call OpenUrl(git_url)
 endfunction
 
 function GetOS()

@@ -12,10 +12,6 @@ let g:loaded_vim_extrovert = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-function! extrovert#Test()
-    echom "TEST"
-endfunction
-
 let g:vim_extrovert_clipboard = ""
 
 

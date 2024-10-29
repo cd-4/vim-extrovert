@@ -18,9 +18,6 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " Exported Functions
-" nmap z :call extrovert#Test()<CR>
-command! -nargs=0 Test call extrovert#Test()
-
 command! -nargs=0 CopyGitUrl call extrovert#CopyGitUrl()
 command! -nargs=0 CopyGitFileUrl call extrovert#CopyGitFileUrl()
 command! -nargs=0 OpenGitUrl call extrovert#OpenGitUrl()

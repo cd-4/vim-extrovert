@@ -186,12 +186,12 @@ endfunction
 
 function extrovert#OpenGitUrl()
     let git_url = GetGitUrl(1)
-    extrovert#OpenUrl(git_url)
+    call extrovert#OpenUrl(git_url)
 endfunction
 
 function extrovert#OpenGitFileUrl()
     let git_url = GetGitUrl(0)
-    extrovert#OpenUrl(git_url)
+    call extrovert#OpenUrl(git_url)
 endfunction
 
 function GetOS()

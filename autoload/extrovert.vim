@@ -7,7 +7,7 @@ if !exists('g:loaded_vim_extrovert')
     finish
 endif
 
-let g:loaded_vim_extrovert = 1
+" let g:loaded_vim_extrovert = 1
 "let g:
 
 let s:save_cpo = &cpo
@@ -169,29 +169,29 @@ function CopyText(text)
     system("echo " . a:text . " | " . copy_command)
 endfunction
 
-function! OpenUrl(url)
+function extrovert#OpenUrl(url)
     let open_command = GetOpenCommand()
     system(open_command . " " . a:url)
 endfunction
 
-function! extrovert#CopyGitUrl()
+function extrovert#CopyGitUrl()
     let git_url = GetGitUrl(1)
     CopyText(git_url)
 endfunction
 
-function! extrovert#CopyGitFileUrl()
+function extrovert#CopyGitFileUrl()
     let git_url = GetGitUrl(0)
     CopyText(git_url)
 endfunction
 
-function! extrovert#OpenGitUrl()
+function extrovert#OpenGitUrl()
     let git_url = GetGitUrl(1)
-    OpenUrl(git_url)
+    extrovert#OpenUrl(git_url)
 endfunction
 
-function! extrovert#OpenGitFileUrl()
+function extrovert#OpenGitFileUrl()
     let git_url = GetGitUrl(0)
-    OpenUrl(git_url)
+    extrovert#OpenUrl(git_url)
 endfunction
 
 function GetOS()

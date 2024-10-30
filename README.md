@@ -8,7 +8,7 @@ Maybe you're sharing your screen and your vim setup is scaring your
 coworkers, so you need to open up the file in GitHub, and have to
 navigate to GitHub and find the file.
 
-###### Well not anymore!
+##### Well not anymore!
 
 `vim-extrovert` allows you to copy the file URL to the clipboard, or
 open it in your browser right away to avoid these tedious steps.
@@ -48,7 +48,7 @@ is something that will open the URL with a command like so:
 COMMAND 'https://github.com/myorg/myrepo/blob/main/path/to/file'
 ```
 
-###### Windows Users
+##### Windows Users
 
 You can set this to something like `Start-Process chrome.exe` for this to work.
 

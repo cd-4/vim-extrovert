@@ -15,7 +15,7 @@ open it in your browser right away to avoid these tedious steps.
 
 ### Support
 
-This plugin has support for **GitHub**, **GitLab**, and **BitBucket**.
+This plugin has support for **GitHub**, ~~**GitLab**~~(TODO), and **BitBucket**.
 
 ## Installation
 

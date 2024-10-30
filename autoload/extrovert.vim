@@ -80,7 +80,7 @@ function IsGitLabRepository(origin_url)
 endfunction
 
 function IsBitBucketRepository(origin_url)
-    return stridx(a:origin_url, "bitbucket.com") != -1
+    return stridx(a:origin_url, "bitbucket.org") != -1
 endfunction
 
 function GetGitHubRepoOwner(origin_url)

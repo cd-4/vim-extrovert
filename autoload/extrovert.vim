@@ -85,7 +85,7 @@ function IsBitBucketRepository(origin_url)
 endfunction
 
 function GetGitHubRepoOwner(origin_url)
-    if stridx(a:origin_url, "@") != -1
+    if stridx(a:origin_url, "git@") != -1
         " SSH
         return split(GetOriginUrlSection(a:origin_url, -2), ":")[1]
     else

@@ -106,7 +106,7 @@ endfunction
 function GetGitUrl(get_line_number)
     let git_branch = GetGitBranch()
     let origin_url = GetOriginUrl()
-    let repo_name = split(GetRepoName(origin_url), '\.')[0]
+    let repo_name = GetRepoName(origin_url)[:-5]
     let line_no = line(".")
     if IsGitHubRepository(origin_url)
         let repo_owner = GetGitHubRepoOwner(origin_url)

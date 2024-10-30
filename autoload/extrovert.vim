@@ -130,7 +130,7 @@ function GetGitUrl(get_line_number)
         if a:get_line_number
             let bitbucket_url = bitbucket_url . "#lines-" . line_no
         endif
-        echom "BitBucket"
+        return bitbucket_url
     else
         echom "Unrecognized git origin"
     endif

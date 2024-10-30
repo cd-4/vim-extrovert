@@ -93,6 +93,16 @@ function GetGitHubRepoOwner(origin_url)
     endif
 endfunction
 
+function GetBitBucketRepoOwner(origin_url)
+    if stridx(a:origin_url, "git@") != -1
+        " SSH
+        return split(GetOriginUrlSection(a:origin_url, -2), ":")[1]
+    else
+        " HTTPS
+        return GetOriginUrlSection(a:origin_url, -2)
+    endif
+endfunction
+
 function GetGitUrl(get_line_number)
     let git_branch = GetGitBranch()
     let origin_url = GetOriginUrl()
@@ -111,6 +121,15 @@ function GetGitUrl(get_line_number)
     elseif IsGitLabRepository(origin_url)
         echom "GitLab"
     elseif IsBitBucketRepository(origin_url)
+        let repo_owner = GetGitHubRepoOwner(origin_url)
+        let relative_file_path = GetRelativeFilePath()
+        let git_hash = GetGitHash()
+        let bitbucket_url = "https://bitbucket.org/" . repo_owner .
+                    \ "/" . repo_name . "/src/" . git_hash .
+                    \ relative_file_path
+        if a:get_line_number
+            let bitbucket_url = bitbucket_url . "#lines-" . line_no
+        endif
         echom "BitBucket"
     else
         echom "Unrecognized git origin"
@@ -139,6 +158,10 @@ function LinuxHasXClip()
         return 1
     endif
     return 0
+endfunction
+
+function GetGitHash()
+    return  trim(system("git rev-parse HEAD"))
 endfunction
 
 function GetClipboardPiper()

@@ -12,7 +12,6 @@ let g:loaded_vim_extrovert = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let g:vim_extrovert_clipboard = ""
 
 
 " Examples:
@@ -123,6 +122,10 @@ function GetRepoName(origin_url)
 endfunction
 
 function GetOpenCommand()
+    if exists("g:vim_extrovert_open_command")
+        return g:vim_extrovert_open_command
+    endif
+
     let os = GetOS()
     if os == "windows"
         return "Start-Process chrome.exe"
@@ -139,7 +142,7 @@ function LinuxHasXClip()
 endfunction
 
 function GetClipboardPiper()
-    if len(g:vim_extrovert_clipboard) > 0
+    if exists("g:vim_extrovert_clipboard")
         return g:vim_extrovert_clipboard
     endif
 

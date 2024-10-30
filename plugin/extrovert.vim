@@ -23,8 +23,6 @@ command! -nargs=0 CopyGitFileUrl call extrovert#CopyGitFileUrl()
 command! -nargs=0 OpenGitUrl call extrovert#OpenGitUrl()
 command! -nargs=0 OpenGitFileUrl call extrovert#OpenGitFileUrl()
 
-
-
 " restore user setting
 let &cpo = s:save_cpo
 unlet s:save_cpo
